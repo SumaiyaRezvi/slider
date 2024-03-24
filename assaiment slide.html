@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .m{
+    
+    margin-top: 10%;
+    width: 34%;
+    margin-left:33% ;
+    border: 3px solid purple;
+    height: 300Px;
+    position: relative;
+    
+  
+ }
+ .r{
+    margin-top: 10px;
+    text-align: center;
+    cursor: pointer;
+    
+       
+ }
+
+ #ab{
+    font-size: 50pt;
+    position: absolute;
+    top: 3px;
+    margin-left: 45%;
+ }
+
+
+  
+</style>
+<body>
+       
+  <div class="m">
+   
+    <img src="r1.jpg" alt="" height="300" width="500">
+    <p id="ab">1</p>
+    <div class="r" onclick="next()">Next</div> 
+</div>
+   
+   
+   <script>
+    
+    
+     var photos = ["r1.jpg","r2.jpg","r3.jpg","r4.jpg"];
+     var imgTag = document.querySelector("img");
+
+     var i = 0;
+
+     function next(){
+        i ++;
+
+        if(i >=photos.length){
+            i =0;
+            imgTag.src = photos[i ];
+        }
+        else{
+            imgTag.src = photos[i ];
+        }
+
+        document.getElementById("ab").innerHTML = i+1;
+
+       
+     }
+
+    
+      
+ </script>
+</body>
+</html>
